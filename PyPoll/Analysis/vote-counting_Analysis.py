@@ -40,3 +40,15 @@ print(f"Total Votes: {total_votes}")
 print("-------------------------")
 print(f"Winner: {winner}")
 
+with open("election_results.txt", "w") as text_file:
+    text_file.write("Election Results\n")
+    text_file.write("-------------------------\n")
+    for candidate, votes in candidates.items():
+        percentage = (votes / total_votes) * 100
+        text_file.write(f"{candidate}: {percentage:.2f}% ({votes})\n")
+    text_file.write("-------------------------\n")
+    text_file.write(f"Total Votes: {total_votes}\n")
+    text_file.write("-------------------------\n")
+    text_file.write(f"Winner: {winner}\n")
+
+print("Results exported to 'election_results.txt'")
