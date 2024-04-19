@@ -50,3 +50,14 @@ print("Total Months: " + str(total_months))
 print("total: ", total)
 print(f"Greatest Increase in Profits: {greatest_increase[0]} (${greatest_increase[1]})")
 print(f"Greatest Decrease in Profits: {greatest_decrease[0]} (${greatest_decrease[1]})")
+
+#Got this with the help of Xpert
+with open('financial_results.txt', 'w') as file:
+    # Write the results to the file
+    file.write(f"Total Months: {total_months}\n")
+    file.write(f"Total: {total}\n")
+    file.write(f"Average Change: {average_change}\n")
+    file.write(f"Greatest Increase: {greatest_increase}\n")
+    file.write(f"Greatest Decrease: {greatest_decrease}\n")
+
+print("Results exported to financial_results.txt")
